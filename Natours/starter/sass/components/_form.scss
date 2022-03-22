@@ -16,6 +16,10 @@
     display: block;
     transition: all .3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: transparent;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -49,6 +53,11 @@
   &__radio-gorup{
     width: 49%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
   
   &__radio-input{
@@ -78,7 +87,7 @@
       display: block;
       height: 1.3rem;
       width: 1.3rem;
-      border-radius: 50%;
+      border-radius: 5000px;
       @include centerObj;
       background-color: $color-primary;
       opacity: 0;
